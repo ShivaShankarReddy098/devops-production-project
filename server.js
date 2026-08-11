@@ -6,7 +6,20 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, {
     "Content-Type": "text/html",
   });
+if (req.url === "/health") {
+  res.writeHead(200, {
+    "Content-Type": "application/json",
+  });
 
+  res.end(
+    JSON.stringify({
+      status: "ok",
+      uptime: process.uptime(),
+    })
+  );
+
+  return;
+}
   res.end(`
     <h1>DevOps Production Project 🚀</h1>
     <p>Application is running successfully.</p>
