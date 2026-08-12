@@ -21,7 +21,7 @@ if (req.url === "/health") {
   return;
 }
   res.end(`
-    <h1>DevOps Production Project 🚀</h1>
+    <h1>DevOps Production Project(CI & CD Automation) 🚀</h1>
     <p>Application is running successfully.</p>
     <p>Environment: ${process.env.NODE_ENV || "development"}</p>
     <p>Server time: ${new Date().toISOString()}</p>
